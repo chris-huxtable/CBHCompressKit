@@ -64,9 +64,7 @@ NS_ASSUME_NONNULL_END
 {
 	if ( (self = [super init]) )
 	{
-		compression_status status = compression_stream_init(&_stream, operation, (compression_algorithm)algorithm);
-
-		if ( status == COMPRESSION_STATUS_ERROR )
+		if ( compression_stream_init(&_stream, operation, (compression_algorithm)algorithm) == COMPRESSION_STATUS_ERROR )
 		{
 			compression_stream_destroy(&_stream);
 			return nil;
