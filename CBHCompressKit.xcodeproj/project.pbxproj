@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		839C0D4E2231CB9C0074D919 /* CBHCompressKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839C0D442231CB9C0074D919 /* CBHCompressKit.framework */; };
+		839C0D532231CB9D0074D919 /* CBHCompressKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 839C0D522231CB9D0074D919 /* CBHCompressKitTests.m */; };
+		839C0D552231CB9D0074D919 /* CBHCompressKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 839C0D472231CB9C0074D919 /* CBHCompressKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		839C0D602231CC380074D919 /* NSData+CBHCompressKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 839C0D5E2231CC380074D919 /* NSData+CBHCompressKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		839C0D612231CC380074D919 /* NSData+CBHCompressKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 839C0D5F2231CC380074D919 /* NSData+CBHCompressKit.m */; };
+		839C0D682231F3370074D919 /* CBHCompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 839C0D662231F3370074D919 /* CBHCompressor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		839C0D692231F3370074D919 /* CBHCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 839C0D672231F3370074D919 /* CBHCompressor.m */; };
+		839C0D6C2231F44B0074D919 /* CBHDecompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 839C0D6A2231F44B0074D919 /* CBHDecompressor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		839C0D6D2231F44B0074D919 /* CBHDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 839C0D6B2231F44B0074D919 /* CBHDecompressor.m */; };
+		839C0D7F223296530074D919 /* CBHCompressTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 839C0D7D223296530074D919 /* CBHCompressTypes.m */; };
+		839C0D812232990D0074D919 /* CBHCompressTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 839C0D80223298BA0074D919 /* CBHCompressTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		839C0D842232D80F0074D919 /* CBHCompressTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 839C0D822232D80F0074D919 /* CBHCompressTransformer.h */; };
+		839C0D852232D80F0074D919 /* CBHCompressTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 839C0D832232D80F0074D919 /* CBHCompressTransformer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		839C0D4F2231CB9C0074D919 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 839C0D3B2231CB9C0074D919 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 839C0D432231CB9C0074D919;
+			remoteInfo = CBHCompressKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		839C0D442231CB9C0074D919 /* CBHCompressKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBHCompressKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		839C0D472231CB9C0074D919 /* CBHCompressKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHCompressKit.h; sourceTree = "<group>"; };
+		839C0D482231CB9C0074D919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		839C0D4D2231CB9C0074D919 /* CBHCompressKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBHCompressKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		839C0D522231CB9D0074D919 /* CBHCompressKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHCompressKitTests.m; sourceTree = "<group>"; };
+		839C0D542231CB9D0074D919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		839C0D5E2231CC380074D919 /* NSData+CBHCompressKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+CBHCompressKit.h"; sourceTree = "<group>"; };
+		839C0D5F2231CC380074D919 /* NSData+CBHCompressKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+CBHCompressKit.m"; sourceTree = "<group>"; };
+		839C0D662231F3370074D919 /* CBHCompressor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHCompressor.h; sourceTree = "<group>"; };
+		839C0D672231F3370074D919 /* CBHCompressor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHCompressor.m; sourceTree = "<group>"; };
+		839C0D6A2231F44B0074D919 /* CBHDecompressor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHDecompressor.h; sourceTree = "<group>"; };
+		839C0D6B2231F44B0074D919 /* CBHDecompressor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHDecompressor.m; sourceTree = "<group>"; };
+		839C0D79223294F80074D919 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		839C0D7D223296530074D919 /* CBHCompressTypes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHCompressTypes.m; sourceTree = "<group>"; };
+		839C0D80223298BA0074D919 /* CBHCompressTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHCompressTypes.h; sourceTree = "<group>"; };
+		839C0D822232D80F0074D919 /* CBHCompressTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHCompressTransformer.h; sourceTree = "<group>"; };
+		839C0D832232D80F0074D919 /* CBHCompressTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHCompressTransformer.m; sourceTree = "<group>"; };
+		83AB99392233533700F0310C /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		839C0D412231CB9C0074D919 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		839C0D4A2231CB9C0074D919 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839C0D4E2231CB9C0074D919 /* CBHCompressKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		839C0D3A2231CB9C0074D919 = {
+			isa = PBXGroup;
+			children = (
+				839C0D79223294F80074D919 /* README.md */,
+				83AB99392233533700F0310C /* LICENSE */,
+				839C0D462231CB9C0074D919 /* CBHCompressKit */,
+				839C0D512231CB9C0074D919 /* CBHCompressKitTests */,
+				839C0D452231CB9C0074D919 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		839C0D452231CB9C0074D919 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				839C0D442231CB9C0074D919 /* CBHCompressKit.framework */,
+				839C0D4D2231CB9C0074D919 /* CBHCompressKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		839C0D462231CB9C0074D919 /* CBHCompressKit */ = {
+			isa = PBXGroup;
+			children = (
+				839C0D472231CB9C0074D919 /* CBHCompressKit.h */,
+				839C0D80223298BA0074D919 /* CBHCompressTypes.h */,
+				839C0D7D223296530074D919 /* CBHCompressTypes.m */,
+				839C0D822232D80F0074D919 /* CBHCompressTransformer.h */,
+				839C0D832232D80F0074D919 /* CBHCompressTransformer.m */,
+				839C0D662231F3370074D919 /* CBHCompressor.h */,
+				839C0D672231F3370074D919 /* CBHCompressor.m */,
+				839C0D6A2231F44B0074D919 /* CBHDecompressor.h */,
+				839C0D6B2231F44B0074D919 /* CBHDecompressor.m */,
+				839C0D5E2231CC380074D919 /* NSData+CBHCompressKit.h */,
+				839C0D5F2231CC380074D919 /* NSData+CBHCompressKit.m */,
+				839C0D482231CB9C0074D919 /* Info.plist */,
+			);
+			path = CBHCompressKit;
+			sourceTree = "<group>";
+		};
+		839C0D512231CB9C0074D919 /* CBHCompressKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				839C0D522231CB9D0074D919 /* CBHCompressKitTests.m */,
+				839C0D542231CB9D0074D919 /* Info.plist */,
+			);
+			path = CBHCompressKitTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		839C0D3F2231CB9C0074D919 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839C0D842232D80F0074D919 /* CBHCompressTransformer.h in Headers */,
+				839C0D602231CC380074D919 /* NSData+CBHCompressKit.h in Headers */,
+				839C0D552231CB9D0074D919 /* CBHCompressKit.h in Headers */,
+				839C0D6C2231F44B0074D919 /* CBHDecompressor.h in Headers */,
+				839C0D682231F3370074D919 /* CBHCompressor.h in Headers */,
+				839C0D812232990D0074D919 /* CBHCompressTypes.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		839C0D432231CB9C0074D919 /* CBHCompressKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 839C0D582231CB9D0074D919 /* Build configuration list for PBXNativeTarget "CBHCompressKit" */;
+			buildPhases = (
+				839C0D3F2231CB9C0074D919 /* Headers */,
+				839C0D402231CB9C0074D919 /* Sources */,
+				839C0D412231CB9C0074D919 /* Frameworks */,
+				839C0D422231CB9C0074D919 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CBHCompressKit;
+			productName = CBHCompressKit;
+			productReference = 839C0D442231CB9C0074D919 /* CBHCompressKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		839C0D4C2231CB9C0074D919 /* CBHCompressKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 839C0D5B2231CB9D0074D919 /* Build configuration list for PBXNativeTarget "CBHCompressKitTests" */;
+			buildPhases = (
+				839C0D492231CB9C0074D919 /* Sources */,
+				839C0D4A2231CB9C0074D919 /* Frameworks */,
+				839C0D4B2231CB9C0074D919 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				839C0D502231CB9C0074D919 /* PBXTargetDependency */,
+			);
+			name = CBHCompressKitTests;
+			productName = CBHCompressKitTests;
+			productReference = 839C0D4D2231CB9C0074D919 /* CBHCompressKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		839C0D3B2231CB9C0074D919 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Christian Huxtable";
+				TargetAttributes = {
+					839C0D432231CB9C0074D919 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					839C0D4C2231CB9C0074D919 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 839C0D3E2231CB9C0074D919 /* Build configuration list for PBXProject "CBHCompressKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 839C0D3A2231CB9C0074D919;
+			productRefGroup = 839C0D452231CB9C0074D919 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				839C0D432231CB9C0074D919 /* CBHCompressKit */,
+				839C0D4C2231CB9C0074D919 /* CBHCompressKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		839C0D422231CB9C0074D919 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		839C0D4B2231CB9C0074D919 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		839C0D402231CB9C0074D919 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839C0D692231F3370074D919 /* CBHCompressor.m in Sources */,
+				839C0D852232D80F0074D919 /* CBHCompressTransformer.m in Sources */,
+				839C0D7F223296530074D919 /* CBHCompressTypes.m in Sources */,
+				839C0D612231CC380074D919 /* NSData+CBHCompressKit.m in Sources */,
+				839C0D6D2231F44B0074D919 /* CBHDecompressor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		839C0D492231CB9C0074D919 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839C0D532231CB9D0074D919 /* CBHCompressKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		839C0D502231CB9C0074D919 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 839C0D432231CB9C0074D919 /* CBHCompressKit */;
+			targetProxy = 839C0D4F2231CB9C0074D919 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		839C0D562231CB9D0074D919 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ANALYZER_GCD_PERFORMANCE = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_INTEGER = YES;
+				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_NULLABILITY = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_FLOAT_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_SEMICOLON_BEFORE_METHOD_BODY = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_CHAR_IS_UNSIGNED_CHAR = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-Wno-gnu";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		839C0D572231CB9D0074D919 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ANALYZER_GCD_PERFORMANCE = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_INTEGER = YES;
+				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_NULLABILITY = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_FLOAT_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_SEMICOLON_BEFORE_METHOD_BODY = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_CHAR_IS_UNSIGNED_CHAR = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = "-Wno-gnu";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		839C0D592231CB9D0074D919 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CBHCompressKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHCompressKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		839C0D5A2231CB9D0074D919 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CBHCompressKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHCompressKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+		839C0D5C2231CB9D0074D919 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BACZA3W44R;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INFOPLIST_FILE = CBHCompressKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHCompressKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		839C0D5D2231CB9D0074D919 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BACZA3W44R;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INFOPLIST_FILE = CBHCompressKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHCompressKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		839C0D3E2231CB9C0074D919 /* Build configuration list for PBXProject "CBHCompressKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				839C0D562231CB9D0074D919 /* Debug */,
+				839C0D572231CB9D0074D919 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		839C0D582231CB9D0074D919 /* Build configuration list for PBXNativeTarget "CBHCompressKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				839C0D592231CB9D0074D919 /* Debug */,
+				839C0D5A2231CB9D0074D919 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		839C0D5B2231CB9D0074D919 /* Build configuration list for PBXNativeTarget "CBHCompressKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				839C0D5C2231CB9D0074D919 /* Debug */,
+				839C0D5D2231CB9D0074D919 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 839C0D3B2231CB9C0074D919 /* Project object */;
+}
