@@ -1,6 +1,11 @@
 # CBHCompressKit
 
+![version](https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000)
+![licence](https://img.shields.io/badge/licence-ISC-lightgrey.svg?cacheSeconds=2592000)
+![coverage](https://img.shields.io/badge/coverage-97%25-brightgreen.svg?cacheSeconds=2592000)
+
 CBHCompressKit provides `CBHCompressor` and `CBHDecompressor` which provide an easy to use means of compressing `NSData`.  They support one-call  and stream compression. Additionally it also provides a `NSData` category to make one-call compression even easier.
+
 
 ## Supported Algorithms:
 
