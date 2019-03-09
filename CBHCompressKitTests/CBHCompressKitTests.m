@@ -18,11 +18,8 @@
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 //
 
-#import <XCTest/XCTest.h>
-
+@import XCTest;
 @import CBHCompressKit;
-
-//#import "CBHCompressKit.h"
 
 
 @interface CBHCompressKitTests : XCTestCase
