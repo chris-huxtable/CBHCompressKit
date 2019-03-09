@@ -37,7 +37,6 @@
 	XCTAssertNotNil(compressed, @"Compression failed.");
 	XCTAssertNotEqualObjects(data, compressed, @"Compressed data should be different from original.");
 	XCTAssert(([compressed length] > 0), @"Compression failed; empty.");
-	//XCTAssert(([compressed length] > [data length]), @"Compression failed; made the data larger.");
 
 	NSData *decompressed = [compressed decompressUsingLZ4];
 	XCTAssertNotNil(decompressed, @"Decompression failed.");
@@ -54,7 +53,6 @@
 	XCTAssertNotNil(compressed, @"Compression failed.");
 	XCTAssertNotEqualObjects(data, compressed, @"Compressed data should be different from original.");
 	XCTAssert(([compressed length] > 0), @"Compression failed; empty.");
-	//XCTAssert(([compressed length] > [data length]), @"Compression failed; made the data larger.");
 
 	NSData *decompressed = [compressed decompressUsingZLib];
 	XCTAssertNotNil(decompressed, @"Decompression failed.");
@@ -71,7 +69,6 @@
 	XCTAssertNotNil(compressed, @"Compression failed.");
 	XCTAssertNotEqualObjects(data, compressed, @"Compressed data should be different from original.");
 	XCTAssert(([compressed length] > 0), @"Compression failed; empty.");
-	//XCTAssert(([compressed length] > [data length]), @"Compression failed; made the data larger.");
 
 	NSData *decompressed = [compressed decompressUsingLZMA];
 	XCTAssertNotNil(decompressed, @"Decompression failed.");
@@ -88,7 +85,6 @@
 	XCTAssertNotNil(compressed, @"Compression failed.");
 	XCTAssertNotEqualObjects(data, compressed, @"Compressed data should be different from original.");
 	XCTAssert(([compressed length] > 0), @"Compression failed; empty.");
-	//XCTAssert(([compressed length] > [data length]), @"Compression failed; made the data larger.");
 
 	NSData *decompressed = [compressed decompressUsingLZFSE];
 	XCTAssertNotNil(decompressed, @"Decompression failed.");
@@ -96,6 +92,17 @@
 	XCTAssertEqualObjects(data, decompressed, @"Decompressed data should be the same as original.");
 }
 
+- (void)testDecompressor_error
+{
+	NSString *message = @"The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.";
+	NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
+	NSError *error = nil;
+
+	NSData *decompressed = [CBHDecompressor decompressData:data usingAlgorithm:CBHCompressAlgorithm_LZMA andError:&error];
+
+	XCTAssertNil(decompressed, @"Decompression failed.");
+	XCTAssertNotNil(error);
+}
 
 - (void)testStreamCompressor
 {
@@ -106,12 +113,14 @@
 		[compressor appendData:[@"The quick brown fox jumps over the lazy dog. " dataUsingEncoding:NSUTF8StringEncoding]];
 		[compressor appendData:[NSData data]];
 		[compressor appendData:[@"The quick brown fox jumps over the lazy dog." dataUsingEncoding:NSUTF8StringEncoding]];
+
+		XCTAssertFalse([compressor hasError]);
+		XCTAssertNil([compressor error]);
 	}];
 
 	XCTAssertNotNil(compressed, @"Compression failed.");
 	XCTAssertNotEqualObjects(data, compressed, @"Compressed data should be different from original.");
 	XCTAssert(([compressed length] > 0), @"Compression failed; empty.");
-	//XCTAssert(([compressed length] > [data length]), @"Compression failed; made the data larger.");
 
 	NSData *decompressed = [compressed decompressUsingLZMA];
 	XCTAssertNotNil(decompressed, @"Decompression failed.");
@@ -128,16 +137,36 @@
 	XCTAssertNotNil(compressed, @"Compression failed.");
 	XCTAssertNotEqualObjects(data, compressed, @"Compressed data should be different from original.");
 	XCTAssert(([compressed length] > 0), @"Compression failed; empty.");
-	//XCTAssert(([compressed length] > [data length]), @"Compression failed; made the data larger.");
 
 	NSData *decompressed = [CBHDecompressor decompressUsingAlgorithm:CBHCompressAlgorithm_LZMA inBlock:^(CBHDecompressor *decompressor) {
 		[decompressor appendData:[compressed subdataWithRange:NSMakeRange(0, 8)]];
 		[decompressor appendData:[NSData data]];
 		[decompressor appendData:[compressed subdataWithRange:NSMakeRange(8, [compressed length] - 8)]];
+
+		XCTAssertFalse([decompressor hasError]);
+		XCTAssertNil([decompressor error]);
 	}];
 	XCTAssertNotNil(decompressed, @"Decompression failed.");
 	XCTAssert(([decompressed length] > 0), @"Decompression failed; empty.");
 	XCTAssertEqualObjects(data, decompressed, @"Decompressed data should be the same as original.");
+}
+
+- (void)testStreamDecompressor_error
+{
+	NSString *message = @"The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.";
+	NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
+	NSError *error = nil;
+
+	NSData *decompressed = [CBHDecompressor decompressUsingAlgorithm:CBHCompressAlgorithm_LZMA andError:&error inBlock:^(CBHDecompressor *decompressor) {
+		[decompressor appendData:[data subdataWithRange:NSMakeRange(0, 8)]];
+		[decompressor appendData:[NSData data]];
+		[decompressor appendData:[data subdataWithRange:NSMakeRange(8, [data length] - 8)]];
+
+		XCTAssertTrue([decompressor hasError]);
+	}];
+
+	XCTAssertNil(decompressed, @"Decompression failed.");
+	XCTAssertNotNil(error);
 }
 
 - (void)testEmpty

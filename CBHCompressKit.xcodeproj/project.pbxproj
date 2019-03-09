@@ -20,6 +20,7 @@
 		839C0D812232990D0074D919 /* CBHCompressTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 839C0D80223298BA0074D919 /* CBHCompressTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		839C0D842232D80F0074D919 /* CBHCompressTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 839C0D822232D80F0074D919 /* CBHCompressTransformer.h */; };
 		839C0D852232D80F0074D919 /* CBHCompressTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 839C0D832232D80F0074D919 /* CBHCompressTransformer.m */; };
+		83AB99482234411800F0310C /* CBHCompressTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB99472234411800F0310C /* CBHCompressTransformerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		839C0D822232D80F0074D919 /* CBHCompressTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHCompressTransformer.h; sourceTree = "<group>"; };
 		839C0D832232D80F0074D919 /* CBHCompressTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHCompressTransformer.m; sourceTree = "<group>"; };
 		83AB99392233533700F0310C /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		83AB99472234411800F0310C /* CBHCompressTransformerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHCompressTransformerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				839C0D522231CB9D0074D919 /* CBHCompressKitTests.m */,
+				83AB99472234411800F0310C /* CBHCompressTransformerTests.m */,
 				839C0D542231CB9D0074D919 /* Info.plist */,
 			);
 			path = CBHCompressKitTests;
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83AB99482234411800F0310C /* CBHCompressTransformerTests.m in Sources */,
 				839C0D532231CB9D0074D919 /* CBHCompressKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
