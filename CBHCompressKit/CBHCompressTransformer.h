@@ -34,8 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Initialization
 
+- (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithAlgorithm:(CBHCompressAlgorithm)algorithm operation:(CBHCompressOperation)operation;
-- (instancetype)initWithAlgorithm:(CBHCompressAlgorithm)algorithm operation:(CBHCompressOperation)operation andBufferSize:(NSUInteger)bufferSize;
+- (instancetype)initWithAlgorithm:(CBHCompressAlgorithm)algorithm operation:(CBHCompressOperation)operation andBufferSize:(NSUInteger)bufferSize NS_DESIGNATED_INITIALIZER;
 
 
 #pragma mark - Mutators

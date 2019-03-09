@@ -35,8 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Initialization
 
+- (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithAlgorithm:(CBHCompressAlgorithm)algorithm;
-- (instancetype)initWithAlgorithm:(CBHCompressAlgorithm)algorithm andBufferSize:(NSUInteger)bufferSize;
+- (instancetype)initWithAlgorithm:(CBHCompressAlgorithm)algorithm andBufferSize:(NSUInteger)bufferSize NS_DESIGNATED_INITIALIZER;
 
 
 #pragma mark - Mutators
@@ -64,21 +65,18 @@ NS_ASSUME_NONNULL_END
 
 	NSData *decompressedData = nil;
 
-	@autoreleasepool {
+	@autoreleasepool
+	{
 		CBHDecompressor *decompressor = [[CBHDecompressor alloc] initWithAlgorithm:algorithm];
 		[decompressor appendData:data];
 
 		decompressedData = [[decompressor finalizeDecompression] retain];
-		if ( !decompressedData )
-		{
-			if ( error != nil ) { *error = [decompressor error]; }
-			[decompressor release];
-			return nil;
-		}
+		if ( !decompressedData && error != nil) { *error = [[decompressor error] retain]; }
 
 		[decompressor release];
 	}
 
+	if ( error && *error ) { [*error autorelease]; }
 	return [decompressedData autorelease];
 }
 
@@ -92,22 +90,18 @@ NS_ASSUME_NONNULL_END
 {
 	NSData *decompressedData = nil;
 
-	@autoreleasepool {
+	@autoreleasepool
+	{
 		CBHDecompressor *decompressor = [[CBHDecompressor alloc] initWithAlgorithm:algorithm];
 
 		block(decompressor);
 
 		decompressedData = [[decompressor finalizeDecompression] retain];
-		if ( !decompressedData )
-		{
-			if ( error != nil ) { *error = [decompressor error]; }
-			[decompressor release];
-			return nil;
-		}
-
+		if ( !decompressedData && error != nil) { *error = [[decompressor error] retain]; }
 		[decompressor release];
 	}
 
+	if ( error && *error ) { [*error autorelease]; }
 	return [decompressedData autorelease];
 }
 

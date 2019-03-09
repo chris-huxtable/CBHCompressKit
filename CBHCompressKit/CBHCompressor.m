@@ -35,8 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Initialization
 
+- (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithAlgorithm:(CBHCompressAlgorithm)algorithm;
-- (instancetype)initWithAlgorithm:(CBHCompressAlgorithm)algorithm andBufferSize:(NSUInteger)bufferSize;
+- (instancetype)initWithAlgorithm:(CBHCompressAlgorithm)algorithm andBufferSize:(NSUInteger)bufferSize NS_DESIGNATED_INITIALIZER;
 
 
 #pragma mark - Mutators
@@ -64,21 +65,17 @@ NS_ASSUME_NONNULL_END
 
 	NSData *compressedData = nil;
 
-	@autoreleasepool {
+	@autoreleasepool
+	{
 		CBHCompressor *compressor = [[CBHCompressor alloc] initWithAlgorithm:algorithm];
 		[compressor appendData:data];
 
 		compressedData = [[compressor finalizeCompression] retain];
-		if ( !compressedData )
-		{
-			if ( error != nil ) { *error = [compressor error]; }
-			[compressor release];
-			return nil;
-		}
-
+		if ( !compressedData && error != nil) { *error = [[compressor error] retain]; }
 		[compressor release];
 	}
 
+	if ( error && *error ) { [*error autorelease]; }
 	return [compressedData autorelease];
 }
 
@@ -91,22 +88,18 @@ NS_ASSUME_NONNULL_END
 {
 	NSData *compressedData = nil;
 
-	@autoreleasepool {
+	@autoreleasepool
+	{
 		CBHCompressor *compressor = [[CBHCompressor alloc] initWithAlgorithm:algorithm];
 
 		block(compressor);
 
 		compressedData = [[compressor finalizeCompression] retain];
-		if ( !compressedData )
-		{
-			if ( error != nil ) { *error = [compressor error]; }
-			[compressor release];
-			return nil;
-		}
-
+		if ( !compressedData && error != nil) { *error = [[compressor error] retain]; }
 		[compressor release];
 	}
 
+	if ( error && *error ) { [*error autorelease]; }
 	return [compressedData autorelease];
 }
 

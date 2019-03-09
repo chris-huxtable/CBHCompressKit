@@ -87,6 +87,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSData * __nullable)compressUsingAlgorithm:(CBHCompressAlgorithm)algorithm andError:(NSError * __nullable * __nullable)error inBlock:(CBHCompressorBlock)block;
 
 
+#pragma mark - Initializers
+
+- (instancetype)init NS_UNAVAILABLE;
+
+
 #pragma mark - Mutators
 
 /**
