@@ -164,19 +164,15 @@ NS_ASSUME_NONNULL_END
 
 - (NSData *)finalizeTransformer
 {
-	if ( compression_stream_process(&_stream, COMPRESSION_STREAM_FINALIZE) != COMPRESSION_STATUS_END )
-	{
-		if ( !_data )
-		{
-			return [NSData data];
-		}
-
-		_error = cbh_createCompressError(CBHCompressError_FinalizationFailed);
-	}
-
 	/// Set Final
 	_final = YES;
 
+	if ( _buffer == NULL ) { return [NSData data]; }
+
+	if ( compression_stream_process(&_stream, COMPRESSION_STREAM_FINALIZE) != COMPRESSION_STATUS_END )
+	{
+		_error = cbh_createCompressError(CBHCompressError_FinalizationFailed);
+	}
 
 	/// If error cleanup and return nil.
 	if ( _error != nil )
