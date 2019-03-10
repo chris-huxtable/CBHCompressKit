@@ -28,8 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Extendes NSData to support compression.
  *
- * @author      Christian Huxtable <chris@huxtable.ca>
- * @version     1.0
+ * @author          Christian Huxtable <chris@huxtable.ca>
+ * @version         1.0
  */
 @interface NSData (CBHCompressKit)
 
@@ -65,6 +65,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSData *)compressUsingLZFSE;
 
 /** Compresses the receiver using the provided algorithm.
+ *
+ * @param algorithm     The algorithm to use.
  *
  * @return The compressed variant of the receiver or nil if there was an error.
  */
@@ -102,6 +104,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSData *)decompressUsingLZFSE;
 
 /** Decompresses the receiver using the provided algorithm.
+ *
+ * @param algorithm     The algorithm to use.
  *
  * @return The compressed variant of the receiver or nil if there was an error.
  */

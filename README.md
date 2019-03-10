@@ -10,7 +10,7 @@ CBHCompressKit provides `CBHCompressor` and `CBHDecompressor` which provide an e
 ## Supported Algorithms:
 
 -  LZ4: A high-speed compression algorithm.
--  LZMA: A high compression ratio algorithm
+-  LZMA: A high compression ratio algorithm.
 -  ZLib: A balanced, cross platform compression algorithm/format.
 -  LZFSE: A balanced,  Apple only compression algorithm.
 

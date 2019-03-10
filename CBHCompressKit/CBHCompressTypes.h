@@ -31,9 +31,13 @@ extern NSString *const CBHCompressErrorDomain;
  * The compressor/decompressor error types.
  */
 typedef NS_ENUM(NSUInteger, CBHCompressError) {
+	/** An unknown error. */
 	CBHCompressError_Unknown,
+	/** Attempted to write data to a finalized stream. */
 	CBHCompressError_MutationWhileFinal,
+	/** Failed to finalize stream. */
 	CBHCompressError_FinalizationFailed,
+	/** Failed to read data from stream. */
 	CBHCompressError_ReadFailed
 };
 
@@ -42,8 +46,12 @@ typedef NS_ENUM(NSUInteger, CBHCompressError) {
  * The supported algorithms.
  */
 typedef NS_ENUM(NSUInteger, CBHCompressAlgorithm) {
+	/** A high-speed compression algorithm. */
 	CBHCompressAlgorithm_LZ4   = COMPRESSION_LZ4,
-	CBHCompressAlgorithm_ZLIB  = COMPRESSION_ZLIB,
+	/** A high compression ratio algorithm. */
 	CBHCompressAlgorithm_LZMA  = COMPRESSION_LZMA,
+	/** A balanced, cross platform compression algorithm/format. */
+	CBHCompressAlgorithm_ZLIB  = COMPRESSION_ZLIB,
+	/** A balanced,  Apple only compression algorithm. */
 	CBHCompressAlgorithm_LZFSE = COMPRESSION_LZFSE
 };
