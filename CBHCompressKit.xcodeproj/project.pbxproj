@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8312D43F223E81B200941232 /* CBHCompressKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CBHCompressKit.podspec; sourceTree = "<group>"; };
 		839C0D442231CB9C0074D919 /* CBHCompressKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBHCompressKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		839C0D472231CB9C0074D919 /* CBHCompressKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHCompressKit.h; sourceTree = "<group>"; };
 		839C0D482231CB9C0074D919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 			children = (
 				839C0D79223294F80074D919 /* README.md */,
 				83AB99392233533700F0310C /* LICENSE */,
+				8312D43F223E81B200941232 /* CBHCompressKit.podspec */,
 				839C0D462231CB9C0074D919 /* CBHCompressKit */,
 				839C0D512231CB9C0074D919 /* CBHCompressKitTests */,
 				839C0D452231CB9C0074D919 /* Products */,
