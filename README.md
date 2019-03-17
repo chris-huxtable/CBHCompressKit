@@ -1,6 +1,7 @@
 # CBHCompressKit
 
 [![release](https://img.shields.io/badge/release-1.0.1-blue.svg?cacheSeconds=2592000)](https://github.com/chris-huxtable/CBHCompressKit/releases)
+[![pod](https://img.shields.io/cocoapods/v/CBHCompressKit.svg)](https://cocoapods.org/pods/CBHCompressKit)
 [![licence](https://img.shields.io/badge/licence-ISC-lightgrey.svg?cacheSeconds=2592000)](https://github.com/chris-huxtable/CBHCompressKit/blob/master/LICENSE)
 [![coverage](https://img.shields.io/badge/coverage-97%25-brightgreen.svg?cacheSeconds=2592000)](https://github.com/chris-huxtable/CBHCompressKit)
 
