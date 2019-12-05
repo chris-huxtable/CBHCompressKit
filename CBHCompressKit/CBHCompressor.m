@@ -1,4 +1,3 @@
-//
 //  CBHCompressor.m
 //  CBHCompressKit
 //
@@ -16,7 +15,6 @@
 //  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 //  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-//
 
 #import "CBHCompressor.h"
 
@@ -32,10 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 	_CBHCompressTransformer *_transformer;
 }
 
-
 #pragma mark - Initialization
 
-- (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithAlgorithm:(CBHCompressAlgorithm)algorithm;
 - (instancetype)initWithAlgorithm:(CBHCompressAlgorithm)algorithm andBufferSize:(NSUInteger)bufferSize NS_DESIGNATED_INITIALIZER;
 
@@ -50,7 +46,6 @@ NS_ASSUME_NONNULL_END
 
 
 @implementation CBHCompressor
-
 
 #pragma mark - Compressors
 

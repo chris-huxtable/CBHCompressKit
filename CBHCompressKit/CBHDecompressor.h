@@ -1,4 +1,3 @@
-//
 //  CBHDecompressor.h
 //  CBHCompressKit
 //
@@ -16,7 +15,6 @@
 //  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 //  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-//
 
 @import Foundation.NSData;
 @import Foundation.NSError;
@@ -26,13 +24,14 @@
 
 @class CBHDecompressor;
 
+
+NS_ASSUME_NONNULL_BEGIN
+
 /** Block for passing a decompressor.
  * @param decompressor The decompressor to use.
  */
 typedef void (^CBHDecompressorBlock)(CBHDecompressor *decompressor);
 
-
-NS_ASSUME_NONNULL_BEGIN
 
 /** Decompresses data using a provided algorithm.
  *
@@ -67,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSData * __nullable)decompressData:(NSData *)data usingAlgorithm:(CBHCompressAlgorithm)algorithm andError:(NSError * __nullable * __nullable)error;
 
-/** Decompresses the data as it is appeneded to the decompressor provided by the block.
+/** Decompresses the data as it is appended to the decompressor provided by the block.
  *
  * @param algorithm The algorithm to use.
  * @param block     The block in which the decompressor is provided.
@@ -76,7 +75,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSData * __nullable)decompressUsingAlgorithm:(CBHCompressAlgorithm)algorithm inBlock:(CBHDecompressorBlock)block;
 
-/** Decompresses the data as it is appeneded to the decompressor provided by the block.
+/** Decompresses the data as it is appended to the decompressor provided by the block.
  *
  * @param algorithm The algorithm to use.
  * @param error     The location for an error object.
@@ -85,11 +84,6 @@ NS_ASSUME_NONNULL_BEGIN
  * @return          The data provided decompressed using the provided specifications or nil if there is an error.
  */
 + (NSData * __nullable)decompressUsingAlgorithm:(CBHCompressAlgorithm)algorithm andError:(NSError * __nullable * __nullable)error inBlock:(CBHDecompressorBlock)block;
-
-
-#pragma mark - Initializers
-
-- (instancetype)init NS_UNAVAILABLE;
 
 
 #pragma mark - Mutators
@@ -102,7 +96,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @param data The data for the receiver to decompress.
  *
- * @return     A boolean indicating if the data was successfully appeneded.
+ * @return     A boolean indicating if the data was successfully appended.
  */
 - (BOOL)appendData:(NSData *)data;
 
@@ -122,6 +116,11 @@ NS_ASSUME_NONNULL_BEGIN
  * A Boolean indicating if there is an error.
  */
 @property (nonatomic, readonly) BOOL hasError;
+
+
+#pragma mark - Unavailable
+
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

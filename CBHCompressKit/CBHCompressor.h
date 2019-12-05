@@ -1,4 +1,3 @@
-//
 //  CBHCompressor.h
 //  CBHCompressKit
 //
@@ -16,7 +15,6 @@
 //  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 //  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-//
 
 @import Foundation.NSData;
 @import Foundation.NSError;
@@ -26,13 +24,14 @@
 
 @class CBHCompressor;
 
+
+NS_ASSUME_NONNULL_BEGIN
+
 /** Block for passing a compressor.
  * @param compressor The compressor to use.
  */
 typedef void (^CBHCompressorBlock)(CBHCompressor *compressor);
 
-
-NS_ASSUME_NONNULL_BEGIN
 
 /** Compresses data using a provided algorithm.
  *
@@ -40,7 +39,6 @@ NS_ASSUME_NONNULL_BEGIN
  * @version     1.0
  */
 @interface CBHCompressor : NSObject
-
 
 #pragma mark - Compressors
 
@@ -87,11 +85,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSData * __nullable)compressUsingAlgorithm:(CBHCompressAlgorithm)algorithm andError:(NSError * __nullable * __nullable)error inBlock:(CBHCompressorBlock)block;
 
 
-#pragma mark - Initializers
-
-- (instancetype)init NS_UNAVAILABLE;
-
-
 #pragma mark - Mutators
 
 /**
@@ -122,6 +115,11 @@ NS_ASSUME_NONNULL_BEGIN
  * A Boolean indicating if there is an error.
  */
 @property (nonatomic, readonly) BOOL hasError;
+
+
+#pragma mark - Unavailable
+
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 
