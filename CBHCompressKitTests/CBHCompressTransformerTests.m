@@ -8,7 +8,7 @@
 
 @import XCTest;
 
-#import "CBHCompressTransformer.h"
+#import "_CBHCompressTransformer.h"
 
 
 @interface CBHCompressTransformTests : XCTestCase
@@ -20,7 +20,7 @@
 
 - (void)testTransformer_useAfterFinal
 {
-	CBHCompressTransformer *transformer = [[CBHCompressTransformer alloc] initWithAlgorithm:CBHCompressAlgorithm_LZMA operation:COMPRESSION_STREAM_ENCODE];
+	_CBHCompressTransformer *transformer = [[_CBHCompressTransformer alloc] initWithAlgorithm:CBHCompressAlgorithm_LZMA operation:COMPRESSION_STREAM_ENCODE];
 
 	[transformer finalizeTransformer];
 	XCTAssertFalse([transformer appendData:[@"This is a test" dataUsingEncoding:NSUTF8StringEncoding]]);

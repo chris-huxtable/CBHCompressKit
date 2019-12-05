@@ -18,8 +18,8 @@
 		839C0D6D2231F44B0074D919 /* CBHDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 839C0D6B2231F44B0074D919 /* CBHDecompressor.m */; };
 		839C0D7F223296530074D919 /* CBHCompressTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 839C0D7D223296530074D919 /* CBHCompressTypes.m */; };
 		839C0D812232990D0074D919 /* CBHCompressTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 839C0D80223298BA0074D919 /* CBHCompressTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		839C0D842232D80F0074D919 /* CBHCompressTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 839C0D822232D80F0074D919 /* CBHCompressTransformer.h */; };
-		839C0D852232D80F0074D919 /* CBHCompressTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 839C0D832232D80F0074D919 /* CBHCompressTransformer.m */; };
+		839C0D842232D80F0074D919 /* _CBHCompressTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 839C0D822232D80F0074D919 /* _CBHCompressTransformer.h */; };
+		839C0D852232D80F0074D919 /* _CBHCompressTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 839C0D832232D80F0074D919 /* _CBHCompressTransformer.m */; };
 		83AB99482234411800F0310C /* CBHCompressTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB99472234411800F0310C /* CBHCompressTransformerTests.m */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +50,8 @@
 		839C0D79223294F80074D919 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		839C0D7D223296530074D919 /* CBHCompressTypes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHCompressTypes.m; sourceTree = "<group>"; };
 		839C0D80223298BA0074D919 /* CBHCompressTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHCompressTypes.h; sourceTree = "<group>"; };
-		839C0D822232D80F0074D919 /* CBHCompressTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHCompressTransformer.h; sourceTree = "<group>"; };
-		839C0D832232D80F0074D919 /* CBHCompressTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHCompressTransformer.m; sourceTree = "<group>"; };
+		839C0D822232D80F0074D919 /* _CBHCompressTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _CBHCompressTransformer.h; sourceTree = "<group>"; };
+		839C0D832232D80F0074D919 /* _CBHCompressTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _CBHCompressTransformer.m; sourceTree = "<group>"; };
 		83AB99392233533700F0310C /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		83AB99472234411800F0310C /* CBHCompressTransformerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHCompressTransformerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,8 +102,8 @@
 				839C0D472231CB9C0074D919 /* CBHCompressKit.h */,
 				839C0D80223298BA0074D919 /* CBHCompressTypes.h */,
 				839C0D7D223296530074D919 /* CBHCompressTypes.m */,
-				839C0D822232D80F0074D919 /* CBHCompressTransformer.h */,
-				839C0D832232D80F0074D919 /* CBHCompressTransformer.m */,
+				839C0D822232D80F0074D919 /* _CBHCompressTransformer.h */,
+				839C0D832232D80F0074D919 /* _CBHCompressTransformer.m */,
 				839C0D662231F3370074D919 /* CBHCompressor.h */,
 				839C0D672231F3370074D919 /* CBHCompressor.m */,
 				839C0D6A2231F44B0074D919 /* CBHDecompressor.h */,
@@ -132,7 +132,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				839C0D842232D80F0074D919 /* CBHCompressTransformer.h in Headers */,
+				839C0D842232D80F0074D919 /* _CBHCompressTransformer.h in Headers */,
 				839C0D602231CC380074D919 /* NSData+CBHCompressKit.h in Headers */,
 				839C0D552231CB9D0074D919 /* CBHCompressKit.h in Headers */,
 				839C0D6C2231F44B0074D919 /* CBHDecompressor.h in Headers */,
@@ -238,7 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				839C0D692231F3370074D919 /* CBHCompressor.m in Sources */,
-				839C0D852232D80F0074D919 /* CBHCompressTransformer.m in Sources */,
+				839C0D852232D80F0074D919 /* _CBHCompressTransformer.m in Sources */,
 				839C0D7F223296530074D919 /* CBHCompressTypes.m in Sources */,
 				839C0D612231CC380074D919 /* NSData+CBHCompressKit.m in Sources */,
 				839C0D6D2231F44B0074D919 /* CBHDecompressor.m in Sources */,

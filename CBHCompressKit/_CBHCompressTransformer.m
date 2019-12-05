@@ -1,5 +1,4 @@
-//
-//  CBHCompressTransformer.m
+//  _CBHCompressTransformer.m
 //  CBHCompressKit
 //
 //  Created by Christian Huxtable, October 2015.
@@ -16,9 +15,8 @@
 //  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 //  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-//
 
-#import "CBHCompressTransformer.h"
+#import "_CBHCompressTransformer.h"
 
 @import Compression;
 
@@ -30,7 +28,7 @@ static NSError *cbh_createCompressError(CBHCompressError error);
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CBHCompressTransformer ()
+@interface _CBHCompressTransformer ()
 {
 	@protected
 
@@ -50,8 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_END
 
 
-@implementation CBHCompressTransformer
-
+@implementation _CBHCompressTransformer
 
 #pragma mark - Initialization
 
@@ -213,5 +210,5 @@ NS_ASSUME_NONNULL_END
 
 NSError *cbh_createCompressError(CBHCompressError error)
 {
-	return [[NSError alloc] initWithDomain:CBHCompressErrorDomain code:error userInfo:nil];
+	return [[NSError alloc] initWithDomain:CBHCompressErrorDomain code:(NSInteger)error userInfo:nil];
 }

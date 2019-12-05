@@ -20,7 +20,7 @@
 
 #import "CBHDecompressor.h"
 
-#import "CBHCompressTransformer.h"
+#import "_CBHCompressTransformer.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 {
 	@protected
 
-	CBHCompressTransformer *_transformer;
+	_CBHCompressTransformer *_transformer;
 }
 
 
@@ -117,7 +117,7 @@ NS_ASSUME_NONNULL_END
 {
 	if ( (self = [super init]) )
 	{
-		_transformer = [[CBHCompressTransformer alloc] initWithAlgorithm:algorithm operation:COMPRESSION_STREAM_DECODE andBufferSize:bufferSize];
+		_transformer = [[_CBHCompressTransformer alloc] initWithAlgorithm:algorithm operation:COMPRESSION_STREAM_DECODE andBufferSize:bufferSize];
 	}
 
 	return self;

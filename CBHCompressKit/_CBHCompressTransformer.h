@@ -1,5 +1,4 @@
-//
-//  CBHCompressTransformer.h
+//  _CBHCompressTransformer.h
 //  CBHCompressKit
 //
 //  Created by Christian Huxtable, October 2015.
@@ -16,7 +15,6 @@
 //  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 //  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-//
 
 @import Foundation.NSData;
 @import Foundation.NSError;
@@ -29,7 +27,7 @@ typedef compression_stream_operation CBHCompressOperation;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CBHCompressTransformer : NSObject
+@interface _CBHCompressTransformer : NSObject
 
 
 #pragma mark - Initialization
