@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name                   = 'CBHCompressKit'
-  spec.version                = '1.0.1'
+  spec.version                = '1.0.2'
   spec.module_name            = 'CBHCompressKit'
 
   spec.summary                = 'CBHCompressKit provides `CBHCompressor` and `CBHDecompressor` which provide an easy-to-use means of compressing `NSData`.'
