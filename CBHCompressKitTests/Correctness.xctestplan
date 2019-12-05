@@ -1,0 +1,50 @@
+{
+  "configurations" : [
+    {
+      "id" : "56E013BA-10C1-4688-B2B7-47F7B44CBD35",
+      "name" : "Behavior",
+      "options" : {
+        "addressSanitizer" : {
+          "detectStackUseAfterReturn" : true,
+          "enabled" : true
+        },
+        "mallocScribbleEnabled" : true,
+        "nsZombieEnabled" : true,
+        "undefinedBehaviorSanitizerEnabled" : true
+      }
+    },
+    {
+      "id" : "A37516D0-ABE1-4776-BF2A-81CFC382F684",
+      "name" : "Threading",
+      "options" : {
+        "threadSanitizerEnabled" : true,
+        "undefinedBehaviorSanitizerEnabled" : true
+      }
+    },
+    {
+      "id" : "3C3BA461-FD9F-43C7-9E90-12D7F75D9EF1",
+      "name" : "Memory",
+      "options" : {
+        "guardMallocEnabled" : true,
+        "mallocGuardEdgesEnabled" : true,
+        "mallocStackLoggingOptions" : {
+          "loggingType" : "allAllocations"
+        },
+        "undefinedBehaviorSanitizerEnabled" : true
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:CBHCompressKit.xcodeproj",
+        "identifier" : "839C0D4C2231CB9C0074D919",
+        "name" : "CBHCompressKitTests"
+      }
+    }
+  ],
+  "version" : 1
+}
