@@ -19,7 +19,7 @@
 @import Foundation.NSData;
 @import Foundation.NSError;
 
-#import "CBHCompressTypes.h"
+#import <CBHCompressKit/CBHCompressTypes.h>
 
 
 @class CBHCompressor;
